@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- external style -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <style>
+        /* internal */
+        .class-global,
+        .d-flex {
+            background-color: yellow;
+            height: 500px;
+            display: flex;
+            /* by default: flex-direction : row */
+            flex-wrap: wrap;
+            /*s'il y a un  dépassement on a un retour a ligne; par defaut nowrap */
+            /* justify-content: space-between; */
+            /* horizontal  */
+            /* align-items: center; */
+            /* vertical */
+            /* flex-direction: column; */
+            /* justify-content : column => vertical */
+            /* align-items : column => horizontal  */
+        }
+
+        .c1 ,.c2, .c3 {
+            width: 25%;
+        }
+
+        @media (max-width:1200px) {
+            .c1 ,.c2, .c3 {
+                width: 33%;
+            }
+        }
+
+        @media (max-width:768px) {
+            .c1 ,.c2, .c3 {
+                width: 50%;
+            }
+        }
+
+        @media (max-width:575px) {
+            .c1 ,.c2, .c3 {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- inline -->
+    <div class=" class-global">
+        <div class=" c1" style="background-color: red; height: 100px;"></div>
+        <div class=" c2" style="background-color: green; height: 100px;"></div>
+        <div class=" c3" style="background-color: blue; height: 100px;"></div>
+    </div>
+
+</body>
+
+</html>
